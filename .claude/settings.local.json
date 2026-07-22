@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx playwright *)",
+      "Bash(npm run *)",
+      "Bash(disown)",
+      "Bash(curl -s http://localhost:3001/api/events)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(pkill -f \"tsx server/index.ts\")",
+      "Bash(pkill -f \"vite\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173)",
+      "Read(//usr/local/n/versions/**)",
+      "Bash(command -v nvm)",
+      "Bash(brew list *)",
+      "Read(//opt/homebrew/**)",
+      "Bash(kill -9 45805)",
+      "Bash(pkill -f \"vite --host\")",
+      "Bash(lsof -i :3001 -sTCP:LISTEN)",
+      "Bash(lsof -i :5173 -sTCP:LISTEN)"
+    ]
+  }
+}

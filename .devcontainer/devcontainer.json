@@ -1,0 +1,22 @@
+{
+  "name": "Senior QA Playwright Exercise",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "forwardPorts": [5173, 3001],
+  "portsAttributes": {
+    "5173": {
+      "label": "React App",
+      "onAutoForward": "openPreview"
+    },
+    "3001": {
+      "label": "API Server",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "npm install && npx playwright install --with-deps chromium",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-playwright.playwright", "dbaeumer.vscode-eslint"]
+    }
+  },
+  "remoteUser": "node"
+}
